@@ -1,8 +1,10 @@
 // Thêm bộ thư viện
 // Add the library.
 #include <MKL_LiquidCrystal_I2C.h>
-#include "Dabble.h"
-#include "MKE_M15_setup.h"
+
+#define CUSTOM_SETTINGS
+#define INCLUDE_GAMEPAD_MODULE
+#include "MKL_Dabble.h"
 
 // Khởi tạo LCD
 // LCD config
@@ -33,8 +35,9 @@ void setup()
   // Khởi tạo module
   // init module
   
-  MKE_M15.setBaudrate(57600);
-  MKE_M15.setName("MKE-M15"); // max 12 characters
+  // MKE_M15.setBaudrate(9600); // safe speed for SoftwareSerial is 9600
+  // MKE_M15.setName("MKE-M15"); // max 12 characters
+  mySoftwareSerial.begin(9600);
   Dabble.begin(mySoftwareSerial);
   
 }
