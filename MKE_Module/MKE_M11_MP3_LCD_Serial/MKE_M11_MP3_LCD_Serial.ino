@@ -62,7 +62,7 @@ void loop()
 
   // Hiển thị giá trị của module lên máy tính.
   // Show the module value on Arduno Serial Monitor
-  Serial.println("Stop file 1");s
+  Serial.println("Stop file 1");
 
   //Gửi giá trị module lên LCD
   //Show the module value on LCD
